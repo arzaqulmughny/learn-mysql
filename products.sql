@@ -64,3 +64,9 @@ SELECT
 	id AS 'CODE',
 	name AS 'PRODUCT NAME'
 FROM products;
+
+-- Ordering, default ASC (lowest to highest)
+SELECT * FROM products ORDER BY price;
+SELECT * FROM products ORDER BY price DESC;
+SELECT * FROM products ORDER BY category DESC;
+SELECT * FROM products ORDER BY created_at DESC;
