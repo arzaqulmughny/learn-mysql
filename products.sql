@@ -77,3 +77,12 @@ SELECT * FROM products LIMIT 2;
 
 -- Skip 2 rows, take 2 rows
 SELECT * FROM products LIMIT 2, 2;
+
+-- Select distinct: prevent duplicate
+SELECT DISTINCT category FROM products;
+
+-- Auto increment for primary key
+ALTER TABLE products
+MODIFY COLUMN id INT NOT NULL AUTO_INCREMENT;
+
+INSERT INTO products(name, price) VALUES('test', 10);
