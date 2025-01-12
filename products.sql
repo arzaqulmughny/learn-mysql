@@ -70,3 +70,10 @@ SELECT * FROM products ORDER BY price;
 SELECT * FROM products ORDER BY price DESC;
 SELECT * FROM products ORDER BY category DESC;
 SELECT * FROM products ORDER BY created_at DESC;
+
+-- Limit
+-- Take 2 rows
+SELECT * FROM products LIMIT 2;
+
+-- Skip 2 rows, take 2 rows
+SELECT * FROM products LIMIT 2, 2;
