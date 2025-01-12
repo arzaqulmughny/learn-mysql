@@ -86,3 +86,12 @@ ALTER TABLE products
 MODIFY COLUMN id INT NOT NULL AUTO_INCREMENT;
 
 INSERT INTO products(name, price) VALUES('test', 10);
+
+SELECT LAST_INSERT_ID();
+
+-- Aggregation
+SELECT COUNT(DISTINCT category) FROM products AS category_count;
+SELECT COUNT(*) FROM products;
+SELECT MIN(price) as lowest_price FROM products;
+SELECT MAX(price) as highest_price from products;
+SELECT AVG(price) as average_price from products;
