@@ -29,3 +29,17 @@ INSERT INTO customers(name, email)
 VALUES ('Arza', 'arza1@email.com');
 
 SELECT * FROM customers;
+
+ALTER TABLE customers 
+ADD COLUMN gender BOOLEAN NOT NULL;
+
+INSERT INTO customers(email, name, gender)
+VALUES ('nisa@email.com', 'Nisa', 0);
+
+UPDATE customers SET gender = 1 WHERE name != 'Nisa';
+
+-- Control flow
+SELECT name, CASE gender WHEN 0 THEN 'WANITA' ELSE 'PRIA' END AS 'gender_desc' FROM customers;
+
+SELECT name, IF(gender = 0, 'PEREMPUAN', 'LAKI-LAKI') AS 'gender_desc' FROM customers;
+
