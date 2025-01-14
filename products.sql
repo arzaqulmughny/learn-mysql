@@ -98,3 +98,6 @@ SELECT AVG(price) as average_price from products;
 
 -- Group By
 SELECT MIN(price) AS lowest_price, category FROM products GROUP BY category;
+
+-- Having
+SELECT COUNT(id) AS total_items, category FROM products GROUP BY category HAVING total_items > 2;
