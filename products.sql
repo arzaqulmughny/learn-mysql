@@ -95,3 +95,6 @@ SELECT COUNT(*) FROM products;
 SELECT MIN(price) as lowest_price FROM products;
 SELECT MAX(price) as highest_price from products;
 SELECT AVG(price) as average_price from products;
+
+-- Group By
+SELECT MIN(price) AS lowest_price, category FROM products GROUP BY category;
